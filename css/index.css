@@ -7713,13 +7713,13 @@ button#go-up:hover #percent {
 
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
-  background-image: url(https://tuchuang.voooe.cn/images/2023/02/28/springBg.png);
-  background-repeat: no-repeat;
-  background-attachment: inherit;
-  background-size: 100%;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100%;
 }
 [data-theme="dark"] #aside-content > .card-widget.card-info {
-  background-image: url(https://tuchuang.voooe.cn/images/2023/02/28/aurora.webp);
+  background-image: url(   );
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
@@ -7785,9 +7785,8 @@ input#pic-link {
 
 /* heo 加载动画头像 */
 .loading-img {
-  background: url(https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp)
-    no-repeat center center;
-  background-size: cover;
+    background: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/b_2b7db977bc6721c856758bf3b09d5070.jpg) no-repeat center center;
+    background-size: cover;
 }
 
 /* heo 夜间模式加载背景色 */
@@ -9526,6 +9525,7 @@ hr:before {
   scale: 1.05;
   transition: all 0.3s ease-in-out;
 }
+
 
 .search-dialog {
   position: fixed;

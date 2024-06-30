@@ -70,13 +70,13 @@ function scrollToTop() {
 /* 欢迎信息 start */
 //get请求
 $.ajax({
-  type: 'get',
-  url: 'https://apis.map.qq.com/ws/location/v1/ip',
-  data: {
-    key: '',  // 这里要写你的KEY!!!
-    output: 'jsonp',
-  },
-  dataType: 'jsonp',
+    type: "get",
+    url: "https://apis.map.qq.com/ws/location/v1/ip",
+    data: {
+        key: "QGHBZ-K7QKP-37IDO-L2HNC-WYIH6-O5BL4",
+        output: "jsonp"
+    },
+    dataType: "jsonp",
   success: function (res) {
     ipLoacation = res;
   }
@@ -99,7 +99,7 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-  let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+    let dist = getDistance(117.1768077, 26.9001754, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
   let pos = ipLoacation.result.ad_info.nation;
   let ip;
   let posdesc;
@@ -285,7 +285,7 @@ function showWelcome() {
   try {
     //自定义文本和需要放的位置
     document.getElementById("welcome-info").innerHTML =
-      `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
+      `<b><center> 欢迎信息 </center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
   } catch (err) {
     // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
   }
@@ -2991,7 +2991,7 @@ function setUniverse() {
 
 // 雪花开关
 if (localStorage.getItem("snow") == undefined) {
-  localStorage.setItem("snow", "none");
+    localStorage.setItem("snow", "block");
 }
 document.getElementById("snow").style.display = localStorage.getItem("snow");
 function setSnow() {
@@ -3007,7 +3007,7 @@ function setSnow() {
 
 // 帧率监测开关
 if (localStorage.getItem("fpson") == undefined) {
-    localStorage.setItem("fpson", "1");
+    localStorage.setItem("fpson", "0");
 }
 function fpssw() {
     if (document.getElementById("fpson").checked) {
@@ -3181,10 +3181,10 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://lskypro.acozycotage.net/Gogonineru/img/dm14.webp);
-    --darkmode-bg:url(https://lskypro.acozycotage.net/Gogonineru/img/yuanshen1.webp);
-    --mobileday-bg: url(https://lskypro.acozycotage.net/Gogonineru/img/snow.webp);
-    --mobilenight-bg: url(https://lskypro.acozycotage.net/Gogonineru/img/mb8.webp);
+    --default-bg: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-3zzygv.jpg);
+    --darkmode-bg:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-l8v3ey.png);
+    --mobileday-bg: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/70575047_p0_master1200.jpg);
+    --mobilenight-bg: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77803754_p0_master1200.jpg);
   }`;
 }
 // 切换背景主函数
@@ -3419,8 +3419,26 @@ function createWinbox() {
 
 <h3>1. 二次元</h3>
 <details class="folding-tag" cyan><summary> 查看二次元背景 </summary>
-              <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Gogonineru/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Gogonineru/img/home_bg.webp)')"></a></div>
+  <div class='content'>
+ <div class="bgbox">
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-l8pqwp.jpg
+)" 
+     class="imgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-l8pqwp.jpg
+)')"></a>
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-85w2go.jpg)" 
+     class="imgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-85w2go.jpg)')"></a>
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-zyqx1v.png)" 
+     class="imgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-zyqx1v.png)')"></a>
+  
+</div>
+
+
               </div>
             </details>
 
@@ -3461,7 +3479,38 @@ function createWinbox() {
 <h3>6. 适配手机</h3>
 <details class="folding-tag" cyan><summary> 查看适配手机的背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Gogonineru/img/mb4.webp)" class="pimgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Gogonineru/img/mb4.webp)')"></a></div>
+              <div class="bgbox">
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77803754_p0_master1200.jpg)" 
+     class="pimgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77803754_p0_master1200.jpg)')"></a>
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77032574_p0_master1200.jpg)" 
+     class="pimgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77032574_p0_master1200.jpg)')"></a>
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/76172945_p0_master1200.jpg)" 
+     class="pimgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/76172945_p0_master1200.jpg)')"></a>
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/74442933_p0_master1200.jpg)" 
+     class="pimgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/74442933_p0_master1200.jpg)')"></a>
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/74279771_p0_master1200.jpg)" 
+     class="pimgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/74279771_p0_master1200.jpg)')"></a>
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/70575047_p0_master1200.jpg)" 
+     class="pimgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/70575047_p0_master1200.jpg)')"></a>
+  <a href="javascript:;" rel="noopener external nofollow" 
+     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-1prokg.jpg)" 
+     class="pimgbox" 
+     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-1prokg.jpg)')"></a>
+</div>
+
+            
               </div>
             </details>
 
