@@ -2826,57 +2826,102 @@ setInterval(() => {
 
 
 /* fps检测 start */
- if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-  var rAF = function () {
-    return (
-      window.requestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      function (callback) {
-        window.setTimeout(callback, 1000 / 60);
-      }
-    );
-  }();
-  var frame = 0;
-  var allFrameCount = 0;
-  var lastTime = Date.now();
-  var lastFameTime = Date.now();
-  var loop = function () {
-    var now = Date.now();
-    var fs = (now - lastFameTime);
-    var fps = Math.round(1000 / fs);
+// 默认关闭 FPS 显示
+if (localStorage.getItem("fpson") == undefined) {
+    localStorage.setItem("fpson", "0");
+}
 
-    lastFameTime = now;
-    // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-    allFrameCount++;
-    frame++;
+// 根据 localStorage 设置按钮状态
+document.addEventListener("DOMContentLoaded", function () {
+    const fpsCheckbox = document.getElementById("fpson");
+    if (fpsCheckbox) {
+        fpsCheckbox.checked = localStorage.getItem("fpson") == "1";
+    }
 
-    if (now > 1000 + lastTime) {
-      var fps = Math.round((frame * 1000) / (now - lastTime));
-      if (fps <= 5) {
-        var kd = `<span style="color:#bd0000">卡成ppt🤢</span>`
-      } else if (fps <= 15) {
-        var kd = `<span style="color:red">电竞级帧率😖</span>`
-      } else if (fps <= 25) {
-        var kd = `<span style="color:orange">有点难受😨</span>`
-      } else if (fps < 35) {
-        var kd = `<span style="color:#9338e6">不太流畅🙄</span>`
-      } else if (fps <= 45) {
-        var kd = `<span style="color:#08b7e4">还不错哦😁</span>`
-      } else {
-        var kd = `<span style="color:#39c5bb">十分流畅🤣</span>`
-      }
-      document.getElementById("fps").innerHTML = `FPS:${fps} ${kd}`;
-      frame = 0;
-      lastTime = now;
+    if (localStorage.getItem("fpson") == "1") {
+        startFPSCounter();
+    } else {
+        document.getElementById("fps").style.display = "none";
+    }
+});
+
+let fpsLoop = null;
+
+function startFPSCounter() {
+    if (fpsLoop) return; // 防止重复启动
+    var rAF = function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            }
+        );
+    }();
+    var frame = 0;
+    var allFrameCount = 0;
+    var lastTime = Date.now();
+    var lastFameTime = Date.now();
+    fpsLoop = function () {
+        var now = Date.now();
+        var fs = (now - lastFameTime);
+        var fps = Math.round(1000 / fs);
+
+        lastFameTime = now;
+        allFrameCount++;
+        frame++;
+
+        if (now > 1000 + lastTime) {
+            var fps = Math.round((frame * 1000) / (now - lastTime));
+            var kd;
+            if (fps <= 5) {
+                kd = `<span style="color:#bd0000">卡成ppt🤢</span>`;
+            } else if (fps <= 15) {
+                kd = `<span style="color:red">电竞级帧率😖</span>`;
+            } else if (fps <= 25) {
+                kd = `<span style="color:orange">有点难受😨</span>`;
+            } else if (fps < 35) {
+                kd = `<span style="color:#9338e6">不太流畅🙄</span>`;
+            } else if (fps <= 45) {
+                kd = `<span style="color:#08b7e4">还不错哦😁</span>`;
+            } else {
+                kd = `<span style="color:#39c5bb">十分流畅🤣</span>`;
+            }
+            document.getElementById("fps").innerHTML = `FPS:${fps} ${kd}`;
+            frame = 0;
+            lastTime = now;
+        }
+
+        rAF(fpsLoop);
     };
 
-    rAF(loop);
-  }
+    fpsLoop();
+}
 
-  loop();
-} else {
-  document.getElementById("fps").style = "display:none!important"
- }
+function stopFPSCounter() {
+    fpsLoop = null;
+    document.getElementById("fps").innerHTML = ""; // 清空显示
+}
+
+function fpssw() {
+    if (document.getElementById("fpson").checked) {
+        localStorage.setItem("fpson", "1");
+        document.getElementById("fps").style.display = "block";
+        startFPSCounter();
+    } else {
+        localStorage.setItem("fpson", "0");
+        document.getElementById("fps").style.display = "none";
+        stopFPSCounter();
+    }
+}
+
+
+
+
+
+
+
+
 /* fps检测 end */
 
 //----------------------------------------------------------------
@@ -3004,19 +3049,6 @@ function setSnow() {
   }
 }
 
-
-// 帧率监测开关
-if (localStorage.getItem("fpson") == undefined) {
-    localStorage.setItem("fpson", "0");
-}
-function fpssw() {
-    if (document.getElementById("fpson").checked) {
-        localStorage.setItem("fpson", "1");
-    } else {
-        localStorage.setItem("fpson", "0");
-    }
-    setTimeout(reload, 600);
-}
 
 
 
