@@ -3213,10 +3213,10 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-3zzygv.jpg);
-    --darkmode-bg:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-l8v3ey.png);
-    --mobileday-bg: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/70575047_p0_master1200.jpg);
-    --mobilenight-bg: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77803754_p0_master1200.jpg);
+    --default-bg: url(https://gogonineru.asia//img/wallhaven-3zzygv.jpg);
+    --darkmode-bg:url(https://gogonineru.asia//img/wallhaven-l8v3ey.png);
+    --mobileday-bg: url(https://gogonineru.asia//img/70575047_p0_master1200.jpg);
+    --mobilenight-bg: url(https://gogonineru.asia//img/77803754_p0_master1200.jpg);
   }`;
 }
 // 切换背景主函数
@@ -3454,19 +3454,19 @@ function createWinbox() {
   <div class='content'>
  <div class="bgbox">
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-l8pqwp.jpg
+     style="background-image:url(https://gogonineru.asia//img/wallhaven-l8pqwp.jpg
 )" 
      class="imgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-l8pqwp.jpg
+     onclick="changeBg('url(https://gogonineru.asia//img/wallhaven-l8pqwp.jpg
 )')"></a>
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-85w2go.jpg)" 
+     style="background-image:url(https://gogonineru.asia//img/wallhaven-85w2go.jpg)" 
      class="imgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-85w2go.jpg)')"></a>
+     onclick="changeBg('url(https://gogonineru.asia//img/wallhaven-85w2go.jpg)')"></a>
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-zyqx1v.png)" 
+     style="background-image:url(https://gogonineru.asia//img/wallhaven-zyqx1v.png)" 
      class="imgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-zyqx1v.png)')"></a>
+     onclick="changeBg('url(https://gogonineru.asia//img/wallhaven-zyqx1v.png)')"></a>
   
 </div>
 
@@ -3513,33 +3513,33 @@ function createWinbox() {
               <div class='content'>
               <div class="bgbox">
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77803754_p0_master1200.jpg)" 
+     style="background-image:url(https://gogonineru.asia//img/77803754_p0_master1200.jpg)" 
      class="pimgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77803754_p0_master1200.jpg)')"></a>
+     onclick="changeBg('url(https://gogonineru.asia//img/77803754_p0_master1200.jpg)')"></a>
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77032574_p0_master1200.jpg)" 
+     style="background-image:url(https://gogonineru.asia//img/77032574_p0_master1200.jpg)" 
      class="pimgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/77032574_p0_master1200.jpg)')"></a>
+     onclick="changeBg('url(https://gogonineru.asia//img/77032574_p0_master1200.jpg)')"></a>
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/76172945_p0_master1200.jpg)" 
+     style="background-image:url(https://gogonineru.asia//img/76172945_p0_master1200.jpg)" 
      class="pimgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/76172945_p0_master1200.jpg)')"></a>
+     onclick="changeBg('url(https://gogonineru.asia//img/76172945_p0_master1200.jpg)')"></a>
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/74442933_p0_master1200.jpg)" 
+     style="background-image:url(https://gogonineru.asia//img/74442933_p0_master1200.jpg)" 
      class="pimgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/74442933_p0_master1200.jpg)')"></a>
+     onclick="changeBg('url(https://gogonineru.asia//img/74442933_p0_master1200.jpg)')"></a>
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/74279771_p0_master1200.jpg)" 
+     style="background-image:url(https://gogonineru.asia//img/74279771_p0_master1200.jpg)" 
      class="pimgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/74279771_p0_master1200.jpg)')"></a>
+     onclick="changeBg('url(https://gogonineru.asia//img/74279771_p0_master1200.jpg)')"></a>
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/70575047_p0_master1200.jpg)" 
+     style="background-image:url(https://gogonineru.asia//img/70575047_p0_master1200.jpg)" 
      class="pimgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/70575047_p0_master1200.jpg)')"></a>
+     onclick="changeBg('url(https://gogonineru.asia//img/70575047_p0_master1200.jpg)')"></a>
   <a href="javascript:;" rel="noopener external nofollow" 
-     style="background-image:url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-1prokg.jpg)" 
+     style="background-image:url(https://gogonineru.asia//img/wallhaven-1prokg.jpg)" 
      class="pimgbox" 
-     onclick="changeBg('url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/wallhaven-1prokg.jpg)')"></a>
+     onclick="changeBg('url(https://gogonineru.asia//img/wallhaven-1prokg.jpg)')"></a>
 </div>
 
             

@@ -6582,43 +6582,43 @@ blockquote.pullquote.right {
 /* 字体引入 */
 @font-face {
     font-family: YSHST;
-    src: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/%E4%BC%98%E8%AE%BE%E5%A5%BD%E8%BA%AB%E4%BD%93.woff2);
+    src: url(https://gogonineru.asia//font/%E4%BC%98%E8%AE%BE%E5%A5%BD%E8%BA%AB%E4%BD%93.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: MiSans;
-    src: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/MiSans.woff2);
+    src: url(https://gogonineru.asia//font/MiSans.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: HYTMR;
-    src: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/HYTangMeiRen55W.woff2);
+    src: url(https://gogonineru.asia//font/HYTangMeiRen55W.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: LXGW;
-    src: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/%E9%9C%9E%E9%B9%9C%E6%96%87%E6%A5%B7.woff2);
+    src: url(https://gogonineru.asia//font/%E9%9C%9E%E9%B9%9C%E6%96%87%E6%A5%B7.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: TTQHB;
-    src: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/%E7%94%9C%E7%94%9C%E5%9C%88%E6%B5%B7%E6%8A%A5%E5%AD%97%E4%BD%93.woff2);
+    src: url(https://gogonineru.asia//font/%E7%94%9C%E7%94%9C%E5%9C%88%E6%B5%B7%E6%8A%A5%E5%AD%97%E4%BD%93.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: Consolas_1;
-    src: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/Consolas.woff2);
+    src: url(https://gogonineru.asia//font/Consolas.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: ZhuZiAWan;
-    src: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/ZhuZiAWan2.woff2);
+    src: url(https://gogonineru.asia//font/ZhuZiAWan2.woff2);
     font-display: swap;
 }
 
@@ -7785,9 +7785,12 @@ input#pic-link {
 
 /* heo 加载动画头像 */
 .loading-img {
-    background: url(https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/b_2b7db977bc6721c856758bf3b09d5070.jpg) no-repeat center center;
+    background: url(https://gogonineru.asia//img/b_2b7db977bc6721c856758bf3b09d5070.jpg) 
+    no-repeat center center; 
     background-size: cover;
 }
+
+
 
 /* heo 夜间模式加载背景色 */
 [data-theme="dark"] {

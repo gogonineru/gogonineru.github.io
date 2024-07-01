@@ -17,7 +17,7 @@ function getNew() {
         bibi.removeChild(document.getElementById('more'))
     } catch (error) { }
 
-    bibi.innerHTML += '<div id="bb_loading"><img src="https://gogonineru-1327390414.cos.ap-guangzhou.myqcloud.com/blog/loading3.gif" alt="bb_loading"></div>' // bb_loading图片可以f12在我网站源码下载，也可以使用其他图片。
+    bibi.innerHTML += '<div id="bb_loading"><img src="https://gogonineru.asia//img/loading3.gif" alt="bb_loading"></div>' // bb_loading图片可以f12在我网站源码下载，也可以使用其他图片。
 
     fetch(Url + page).then(res => res.json()).then((res) => {
         total = res.data.total
