@@ -6873,41 +6873,52 @@ div#archive {
   border: 0.5px solid #404040;
 }
 
-/* 鼠标样式 */
+/* 默认鼠标样式 */
 #cursor {
-  position: fixed;
-  width: 16px;
-  height: 16px;
-  background: var(--theme-color) !important;
-  border-radius: 8px;
-  opacity: 0.25;
-  z-index: 10086;
-  pointer-events: none;
-  transition: 0.2s ease-in-out;
-  transition-property: background, opacity, transform;
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background: var(--theme-color) !important;
+    border-radius: 8px;
+    opacity: 0.25;
+    z-index: 10086;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    transition-property: background, opacity, transform;
 }
 
-#cursor.hidden {
-  opacity: 0;
+    /* 隐藏样式 */
+    #cursor.hidden {
+        opacity: 0;
+    }
+
+    /* 悬停样式 */
+    #cursor.hover {
+        opacity: 0.1;
+        transform: scale(2.5);
+        -webkit-transform: scale(2.5);
+        -moz-transform: scale(2.5);
+        -ms-transform: scale(2.5);
+        -o-transform: scale(2.5);
+    }
+
+    /* 激活样式 */
+    #cursor.active {
+        opacity: 0.5;
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
+    }
+
+/* 手机隐藏，电脑显示 */
+@media (max-width: 768px) {
+    #cursor {
+        display: none;
+    }
 }
 
-#cursor.hover {
-  opacity: 0.1;
-  transform: scale(2.5);
-  -webkit-transform: scale(2.5);
-  -moz-transform: scale(2.5);
-  -ms-transform: scale(2.5);
-  -o-transform: scale(2.5);
-}
-
-#cursor.active {
-  opacity: 0.5;
-  transform: scale(0.5);
-  -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  -o-transform: scale(0.5);
-}
 
 /* twikoo评论美化 */
 /* 自定义twikoo评论输入框高度 */
