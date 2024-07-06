@@ -6724,20 +6724,48 @@ center#name-container {
 /* 手机端适配 */
 @media screen and (max-width: 768px) {
     #nav .menus_items {
-        left: 0 !important; /* 左对齐主菜单 */
-        transform: none !important; /* 移除水平居中平移 */
-        width: 100% !important; /* 占满容器宽度 */
+        display: flex; /* 使用 Flexbox 布局 */
+        flex-direction: column; /* 垂直排列菜单项 */
+        align-items: flex-start; /* 左对齐菜单项 */
+        position: relative; /* 相对定位 */
+        width: 100%; /* 占满容器宽度 */
+        left: 0; /* 清除绝对定位的 left 值 */
+        transform: none; /* 移除水平居中平移 */
     }
 
-        #nav .menus_items .menus_item:hover .menus_item_child {
-            left: 0 !important; /* 左对齐子菜单 */
-            transform: none !important; /* 移除水平居中平移 */
+        /* 一级菜单项样式 */
+        #nav .menus_items .menus_item {
+            padding: 8px 0; /* 增加上下内边距 */
+            width: 100%; /* 占满容器宽度 */
         }
 
+            /* 子菜单显示 */
+            #nav .menus_items .menus_item .menus_item_child {
+                display: none; /* 默认隐藏子菜单 */
+                position: relative; /* 相对定位 */
+                left: 0; /* 左对齐子菜单 */
+                transform: none; /* 移除水平居中平移 */
+                width: 100%; /* 占满容器宽度 */
+            }
+
+            /* 子菜单横向展示 */
+            #nav .menus_items .menus_item:hover .menus_item_child {
+                display: block; /* 悬停时显示子菜单 */
+            }
+
+    /* 子菜单项样式 */
     .menus_items .menus_item .menus_item_child li {
         margin: 5px 0; /* 调整子菜单项的间距 */
+        padding-left: 15px; /* 添加左内边距，使子菜单项稍微偏移 */
+        width: calc(100% - 15px); /* 调整子菜单项的宽度以适应内边距 */
+    }
+
+    .menus_items .menus_item .menus_item_child a {
+        display: block;
+        width: 100%;
     }
 }
+
 
 /*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
 /* #page-header:not(.not-top-img):before {
