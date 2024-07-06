@@ -6674,6 +6674,53 @@ center#name-container {
     background-color: transparent!important;
 } */
 
+/* 一级菜单居中 */
+#nav .menus_items {
+    display: inline; /* 菜单项设置为内联显示 */
+    position: absolute !important; /* 绝对定位菜单容器 */
+    width: max-content !important; /* 自动调整宽度以适应内容 */
+    left: 50% !important; /* 水平居中 */
+    transform: translateX(-50%) !important; /* 水平居中的平移调整 */
+}
+
+    /* 一级菜单项样式 */
+    #nav .menus_items .menus_item {
+        padding: 0 0 0 8px !important; /* 设置菜单项的内边距 */
+        position: relative; /* 使子菜单可以相对于父菜单项定位 */
+    }
+
+        /* 子菜单横向展示 */
+        #nav .menus_items .menus_item:hover .menus_item_child {
+            display: flex !important; /* 悬停时显示子菜单，并设置为横向排列 */
+            position: absolute; /* 绝对定位子菜单 */
+            top: 80%; /* 子菜单放在父菜单项的下方 */
+            left: 50%; /* 子菜单的左边缘放在父菜单项的中间 */
+            transform: translateX(-50%); /* 将子菜单水平居中对齐 */
+           /*  background: white; 根据需要添加背景色 */
+            z-index: 1000; /* 确保子菜单在上层显示 */
+        }
+
+        /* 子菜单项样式 */
+        #nav .menus_items .menus_item .menus_item_child li {
+            margin: 0 5px; /* 调整子菜单项的间距 */
+        }
+
+        #nav .menus_items .menus_item .menus_item_child a {
+            text-decoration: none;
+            color: black;
+        }
+
+/* 清除之前的 left 定位 */
+.menus_items .menus_item:nth-child(2) .menus_item_child,
+.menus_items .menus_item:nth-child(3) .menus_item_child,
+.menus_items .menus_item:nth-child(4) .menus_item_child,
+.menus_items .menus_item:nth-child(5) .menus_item_child,
+.menus_items .menus_item:nth-child(6) .menus_item_child,
+.menus_items .menus_item:nth-child(7) .menus_item_child {
+    left: 50% !important; /* 统一设置为居中 */
+    transform: translateX(-50%) !important; /* 水平居中对齐 */
+}
+
 /* 手机端适配 */
 @media screen and (max-width: 768px) {
     #nav .menus_items {
@@ -6713,35 +6760,6 @@ center#name-container {
         width: 100%;
     }
 }
-
-
-/* 手机端适配 */
-@media screen and (max-width: 768px) {
-    /* 子菜单显示 */
-    #nav .menus_items .menus_item:hover .menus_item_child {
-        display: block; /* 悬停时显示子菜单 */
-        position: relative; /* 相对定位 */
-        top: 0; /* 清除 top 值 */
-        left: 0; /* 左对齐子菜单 */
-        transform: none; /* 移除水平居中平移 */
-        width: 100%; /* 占满容器宽度 */
-        padding-left: 15px; /* 添加左内边距 */
-    }
-
-    /* 子菜单项样式 */
-    .menus_items .menus_item .menus_item_child li {
-        margin: 5px 0; /* 调整子菜单项的间距 */
-        padding-left: 15px; /* 添加左内边距，使子菜单项稍微偏移 */
-        width: calc(100% - 15px); /* 调整子菜单项的宽度以适应内边距 */
-    }
-
-    .menus_items .menus_item .menus_item_child a {
-        display: block;
-        width: 100%;
-    }
-}
-
-
 
 
 
