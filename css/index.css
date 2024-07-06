@@ -6735,34 +6735,39 @@ center#name-container {
         /* 一级菜单项样式调整 */
         #nav .menus_items .menus_item {
             display: block; /* 设置为块级显示 */
-            padding: 10px 0; /* 增加上下内边距 */
+            padding: 10px 15px; /* 增加上下内边距 */
             position: relative; /* 相对定位 */
             width: 100%; /* 占满容器宽度 */
+            box-sizing: border-box; /* 包含内边距和边框在内的宽度 */
         }
 
             /* 子菜单显示 */
-            #nav .menus_items .menus_item:hover .menus_item_child {
-                display: block !important; /* 悬停时显示子菜单 */
+            #nav .menus_items .menus_item .menus_item_child {
+                display: none; /* 默认隐藏子菜单 */
                 position: relative; /* 相对定位 */
-                top: 0; /* 清除 top 值 */
-                left: 0; /* 左对齐子菜单 */
-                transform: none; /* 清除水平居中平移 */
                 width: 100%; /* 占满容器宽度 */
                 padding-left: 0; /* 清除左内边距 */
+                margin-top: -10px; /* 适当调整以紧贴主菜单项 */
+            }
+
+            #nav .menus_items .menus_item:hover .menus_item_child,
+            #nav .menus_items .menus_item:focus .menus_item_child {
+                display: block; /* 悬停或获得焦点时显示子菜单 */
             }
 
     /* 子菜单项样式 */
     .menus_items .menus_item .menus_item_child li {
         margin: 0; /* 清除子菜单项的间距 */
-        padding-left: 0; /* 清除左内边距 */
+        padding: 10px 15px; /* 添加内边距 */
         width: 100%; /* 占满容器宽度 */
+        box-sizing: border-box; /* 包含内边距和边框在内的宽度 */
     }
 
     .menus_items .menus_item .menus_item_child a {
         display: block;
         width: 100%;
-        padding: 10px 15px; /* 添加内边距 */
-        box-sizing: border-box; /* 包含内边距和边框在内的宽度 */
+        text-decoration: none;
+        color: black;
     }
 }
 
