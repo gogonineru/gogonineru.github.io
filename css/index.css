@@ -6721,6 +6721,23 @@ center#name-container {
     transform: translateX(-50%) !important; /* 水平居中对齐 */
 }
 
+/* 手机端适配 */
+@media screen and (max-width: 768px) {
+    #nav .menus_items {
+        left: 0 !important; /* 左对齐主菜单 */
+        transform: none !important; /* 移除水平居中平移 */
+        width: 100% !important; /* 占满容器宽度 */
+    }
+
+        #nav .menus_items .menus_item:hover .menus_item_child {
+            left: 0 !important; /* 左对齐子菜单 */
+            transform: none !important; /* 移除水平居中平移 */
+        }
+
+    .menus_items .menus_item .menus_item_child li {
+        margin: 5px 0; /* 调整子菜单项的间距 */
+    }
+}
 
 /*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
 /* #page-header:not(.not-top-img):before {
