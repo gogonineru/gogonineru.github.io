@@ -6731,14 +6731,15 @@ center#name-container {
         left: 0; /* 左对齐子菜单 */
         transform: none; /* 移除水平居中平移 */
         width: 100%; /* 占满容器宽度 */
-        padding-left: 15px; /* 添加左内边距 */
+        padding: 0; /* 清除内边距 */
+        margin: 0; /* 清除外边距 */
     }
 
     /* 子菜单项样式 */
     .menus_items .menus_item .menus_item_child li {
-        margin: 5px 0; /* 调整子菜单项的间距 */
-        padding-left: 15px; /* 添加左内边距，使子菜单项稍微偏移 */
-        width: calc(100% - 15px); /* 调整子菜单项的宽度以适应内边距 */
+        margin: 0; /* 清除子菜单项的外边距 */
+        padding: 10px 0; /* 设置子菜单项的上下内边距 */
+        width: 100%; /* 子菜单项占满容器宽度 */
     }
 
     .menus_items .menus_item .menus_item_child a {
@@ -6746,6 +6747,7 @@ center#name-container {
         width: 100%;
     }
 }
+
 
 
 
