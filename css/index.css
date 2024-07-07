@@ -6674,7 +6674,7 @@ center#name-container {
     background-color: transparent!important;
 } */
 
-/* 一级菜单居中（桌面端样式） */
+/* 一级菜单居中 */
 #nav .menus_items {
     display: inline; /* 菜单项设置为内联显示 */
     position: absolute !important; /* 绝对定位菜单容器 */
@@ -6683,23 +6683,24 @@ center#name-container {
     transform: translateX(-50%) !important; /* 水平居中的平移调整 */
 }
 
-    /* 一级菜单项样式（桌面端样式） */
+    /* 一级菜单项样式 */
     #nav .menus_items .menus_item {
         padding: 0 0 0 8px !important; /* 设置菜单项的内边距 */
         position: relative; /* 使子菜单可以相对于父菜单项定位 */
     }
 
-        /* 子菜单横向展示（桌面端样式） */
+        /* 子菜单横向展示 */
         #nav .menus_items .menus_item:hover .menus_item_child {
             display: flex !important; /* 悬停时显示子菜单，并设置为横向排列 */
             position: absolute; /* 绝对定位子菜单 */
             top: 80%; /* 子菜单放在父菜单项的下方 */
             left: 50%; /* 子菜单的左边缘放在父菜单项的中间 */
             transform: translateX(-50%); /* 将子菜单水平居中对齐 */
+            /*  background: white; 根据需要添加背景色 */
             z-index: 1000; /* 确保子菜单在上层显示 */
         }
 
-        /* 子菜单项样式（桌面端样式） */
+        /* 子菜单项样式 */
         #nav .menus_items .menus_item .menus_item_child li {
             margin: 0 5px; /* 调整子菜单项的间距 */
         }
@@ -6709,7 +6710,7 @@ center#name-container {
             color: black;
         }
 
-/* 清除之前的 left 定位（桌面端样式） */
+/* 清除之前的 left 定位 */
 .menus_items .menus_item:nth-child(2) .menus_item_child,
 .menus_items .menus_item:nth-child(3) .menus_item_child,
 .menus_items .menus_item:nth-child(4) .menus_item_child,
@@ -6719,6 +6720,8 @@ center#name-container {
     left: 50% !important; /* 统一设置为居中 */
     transform: translateX(-50%) !important; /* 水平居中对齐 */
 }
+
+
 
 /* 手机端适配 */
 @media screen and (max-width: 768px) {
