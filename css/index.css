@@ -6732,7 +6732,7 @@ center#name-container {
         display: block;
         position: static !important;
         transform: none !important;
-        text-align: center; /* 或者根据需要调整为左对齐 */
+        text-align: left; /* 菜单项左对齐 */
     }
 
         #nav .menus_items .menus_item {
@@ -6741,11 +6741,11 @@ center#name-container {
 
             #nav .menus_items .menus_item .menus_item_child {
                 display: none; /* 默认隐藏子菜单 */
-                position: absolute; /* 使用绝对定位 */
-                left: 50%; /* 子菜单左边缘对齐父菜单项中间 */
-                transform: translateX(50%); /* 将子菜单水平居中 */
-                margin-top: 10px; /* 适当增加子菜单与父菜单项的距离 */
-                width: max-content; /* 自适应宽度 */
+                position: absolute; /* 绝对定位子菜单 */
+                top: 0; /* 子菜单与父菜单项对齐 */
+                right: 100%; /* 子菜单放在父菜单项右侧 */
+                transform: none; /* 取消居中变换 */
+                margin-top: 0; /* 取消额外的顶部外边距 */
             }
 
             #nav .menus_items .menus_item:hover .menus_item_child {
