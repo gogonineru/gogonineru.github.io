@@ -6741,13 +6741,15 @@ center#name-container {
 
             #nav .menus_items .menus_item .menus_item_child {
                 display: none; /* 默认隐藏子菜单 */
-                position: static; /* 重置定位 */
-                transform: none;
+                position: absolute; /* 使用绝对定位 */
+                left: 50%; /* 子菜单左边缘对齐父菜单项中间 */
+                transform: translateX(-50%); /* 将子菜单水平居中 */
+                margin-top: 10px; /* 适当增加子菜单与父菜单项的距离 */
+                width: max-content; /* 自适应宽度 */
             }
 
             #nav .menus_items .menus_item:hover .menus_item_child {
                 display: block !important;
-                position: static;
             }
 
             /* 手机端子菜单项样式 */
