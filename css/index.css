@@ -6735,7 +6735,7 @@ center#name-container {
         #nav .menus_items .menus_item {
             padding: 8px 0 !important; /* 设置菜单项的内边距 */
             width: 100%; /* 占满容器宽度 */
-            position: relative; /* 相对定位 */
+            position: relative; /* 确保子菜单相对定位 */
         }
 
             /* 子菜单纵向展示 */
