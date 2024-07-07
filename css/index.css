@@ -6723,7 +6723,6 @@ center#name-container {
 
 /* 手机端适配 */
 @media screen and (max-width: 768px) {
-    /* 只针对导航菜单 */
     #nav .menus_items {
         display: block; /* 菜单项设置为块级显示 */
         position: relative; /* 相对定位菜单容器 */
@@ -6736,24 +6735,29 @@ center#name-container {
         #nav .menus_items .menus_item {
             padding: 8px 0 !important; /* 设置菜单项的内边距 */
             width: 100%; /* 占满容器宽度 */
+            position: relative; /* 相对定位 */
         }
 
             /* 子菜单纵向展示 */
-            #nav .menus_items .menus_item:hover .menus_item_child {
-                display: block !important; /* 悬停时显示子菜单，并设置为块级显示 */
+            #nav .menus_items .menus_item .menus_item_child {
+                display: none; /* 默认隐藏子菜单 */
                 position: relative; /* 相对定位子菜单 */
                 top: 0; /* 清除子菜单的 top 值 */
                 left: 0; /* 清除子菜单的 left 值 */
                 transform: none; /* 清除子菜单的水平居中对齐 */
                 width: 100%; /* 占满容器宽度 */
-                padding-left: 15px; /* 添加左内边距 */
+                padding-left: 0; /* 清除内边距 */
+            }
+
+            #nav .menus_items .menus_item:hover .menus_item_child {
+                display: block !important; /* 悬停时显示子菜单 */
             }
 
             /* 子菜单项样式 */
             #nav .menus_items .menus_item .menus_item_child li {
-                margin: 5px 0; /* 调整子菜单项的间距 */
-                padding-left: 15px; /* 添加左内边距 */
-                width: calc(100% - 15px); /* 调整子菜单项的宽度以适应内边距 */
+                margin: 0; /* 调整子菜单项的间距 */
+                padding: 8px 15px; /* 添加内边距 */
+                width: 100%; /* 占满容器宽度 */
             }
 
             #nav .menus_items .menus_item .menus_item_child a {
@@ -6761,6 +6765,7 @@ center#name-container {
                 width: 100%;
             }
 }
+
 
 
 
