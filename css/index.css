@@ -6723,6 +6723,7 @@ center#name-container {
 
 /* 手机端适配 */
 @media screen and (max-width: 768px) {
+    /* 只针对导航菜单 */
     #nav .menus_items {
         display: block; /* 菜单项设置为块级显示 */
         position: relative; /* 相对定位菜单容器 */
@@ -6748,18 +6749,19 @@ center#name-container {
                 padding-left: 15px; /* 添加左内边距 */
             }
 
-    /* 子菜单项样式 */
-    .menus_items .menus_item .menus_item_child li {
-        margin: 5px 0; /* 调整子菜单项的间距 */
-        padding-left: 15px; /* 添加左内边距 */
-        width: calc(100% - 15px); /* 调整子菜单项的宽度以适应内边距 */
-    }
+            /* 子菜单项样式 */
+            #nav .menus_items .menus_item .menus_item_child li {
+                margin: 5px 0; /* 调整子菜单项的间距 */
+                padding-left: 15px; /* 添加左内边距 */
+                width: calc(100% - 15px); /* 调整子菜单项的宽度以适应内边距 */
+            }
 
-    .menus_items .menus_item .menus_item_child a {
-        display: block;
-        width: 100%;
-    }
+            #nav .menus_items .menus_item .menus_item_child a {
+                display: block;
+                width: 100%;
+            }
 }
+
 
 
 
@@ -6954,8 +6956,9 @@ div#archive {
 /* 手机隐藏，电脑显示 */
 @media (max-width: 768px) {
     #cursor {
-        display: none;
+        display: none !important;
     }
+}
 
     /* twikoo评论美化 */
     /* 自定义twikoo评论输入框高度 */
