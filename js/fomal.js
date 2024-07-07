@@ -3643,3 +3643,22 @@ function toggleWinbox() {
 }
 
 /* 美化模块 end */
+
+
+
+<div id="nav">
+    <ul class="menus_items mobile-menu">
+        <li class="menus_item">Menu Item 1
+            <ul class="menus_item_child">
+                <li><a href="#">Submenu Item 1</a></li>
+                <li><a href="#">Submenu Item 2</a></li>
+            </ul>
+        </li>
+        <li class="menus_item">Menu Item 2
+            <ul class="menus_item_child">
+                <li><a href="#">Submenu Item 3</a></li>
+                <li><a href="#">Submenu Item 4</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
