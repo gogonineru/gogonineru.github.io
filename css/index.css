@@ -6723,77 +6723,51 @@ center#name-container {
 /* 手机端适配 */
 @media screen and (max-width: 768px) {
     #nav .menus_items {
-        display: block !important; /* 菜单项设置为块级显示 */
-        position: relative !important; /* 相对定位菜单容器 */
-        width: 100% !important; /* 占满容器宽度 */
-        left: 0 !important; /* 清除水平居中 */
-        transform: none !important; /* 清除水平居中的平移调整 */
+        display: block; /* 菜单项设置为块级显示 */
+        position: relative; /* 相对定位菜单容器 */
+        width: 100%; /* 占满容器宽度 */
+        left: 0; /* 清除水平居中 */
+        transform: none; /* 清除水平居中的平移调整 */
     }
 
         /* 一级菜单项样式 */
         #nav .menus_items .menus_item {
             padding: 8px 0 !important; /* 设置菜单项的内边距 */
-            width: 100% !important; /* 占满容器宽度 */
-            position: relative !important; /* 确保子菜单相对定位 */
+            width: 100%; /* 占满容器宽度 */
         }
 
             /* 子菜单纵向展示 */
-            #nav .menus_items .menus_item .menus_item_child {
-                display: none !important; /* 默认隐藏子菜单 */
-                position: relative !important; /* 相对定位子菜单 */
-                top: 0 !important; /* 清除子菜单的 top 值 */
-                left: 0 !important; /* 清除子菜单的 left 值 */
-                transform: none !important; /* 清除子菜单的水平居中对齐 */
-                width: 100% !important; /* 占满容器宽度 */
-                padding-left: 0 !important; /* 清除内边距 */
-            }
-
             #nav .menus_items .menus_item:hover .menus_item_child {
-                display: block !important; /* 悬停时显示子菜单 */
+                display: block !important; /* 悬停时显示子菜单，并设置为块级显示 */
+                position: relative; /* 相对定位子菜单 */
+                top: 0; /* 清除子菜单的 top 值 */
+                left: 0; /* 清除子菜单的 left 值 */
+                transform: none; /* 清除子菜单的水平居中对齐 */
+                width: 100%; /* 占满容器宽度 */
+                padding-left: 15px; /* 添加左内边距 */
             }
 
-            /* 子菜单项样式 */
-            #nav .menus_items .menus_item .menus_item_child li {
-                margin: 5px 0 !important; /* 调整子菜单项的间距 */
-                padding-left: 15px !important; /* 添加左内边距 */
-                width: 100% !important; /* 调整子菜单项的宽度以适应内边距 */
-            }
+    /* 子菜单项样式 */
+    .menus_items .menus_item .menus_item_child li {
+        margin: 5px 0; /* 调整子菜单项的间距 */
+        padding-left: 15px; /* 添加左内边距 */
+        width: calc(100% - 15px); /* 调整子菜单项的宽度以适应内边距 */
+    }
 
-            #nav .menus_items .menus_item .menus_item_child a {
-                display: block !important;
-                width: 100% !important;
-            }
+    .menus_items .menus_item .menus_item_child a {
+        display: block;
+        width: 100%;
+    }
 }
+
+
+
 
 /* 手机侧边菜单栏 */
 #sidebar #sidebar-menus {
-    background: linear-gradient(60deg, #ffd7e4 0%, #c8f1ff 93%);
+    background: linear-gradient(60deg, #ffd7e4 0, #c8f1ff 93%);
     border-radius: 15px;
-    padding: 15px; /* 添加内边距，确保内容不会贴边 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
 }
-
-    #sidebar #sidebar-menus .menu-item {
-        padding: 10px 0; /* 每个菜单项的内边距 */
-        border-bottom: 1px solid #ccc; /* 添加底部边框用于分隔 */
-    }
-
-        #sidebar #sidebar-menus .menu-item a {
-            text-decoration: none;
-            color: #333; /* 链接颜色 */
-            display: block;
-            width: 100%;
-        }
-
-        #sidebar #sidebar-menus .menu-item .submenu {
-            display: none; /* 默认隐藏子菜单 */
-            padding-left: 15px; /* 子菜单左内边距 */
-        }
-
-        #sidebar #sidebar-menus .menu-item:hover .submenu {
-            display: block; /* 悬停时显示子菜单 */
-        }
-
 
 
 
