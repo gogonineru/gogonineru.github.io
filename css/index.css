@@ -6722,47 +6722,38 @@ center#name-container {
 }
 
 
-/* 手机端适配 */
-@media screen and (max-width: 768px) {
+/* 针对移动设备的调整 */
+@media (max-width: 768px) {
+    /* 一级菜单 */
     #nav .menus_items {
-        display: block; /* 菜单项设置为块级显示 */
-        position: relative; /* 相对定位菜单容器 */
-        width: 100%; /* 占满容器宽度 */
-        left: 0; /* 清除水平居中 */
-        transform: none; /* 清除水平居中的平移调整 */
+        position: static !important; /* 取消绝对定位，改为静态定位 */
+        width: 100% !important; /* 宽度调整为100% */
+        display: block; /* 改为块级显示 */
+        text-align: center; /* 居中对齐 */
     }
 
-        /* 一级菜单项样式 */
+        /* 一级菜单项 */
         #nav .menus_items .menus_item {
-            padding: 8px 0 !important; /* 设置菜单项的内边距 */
-            width: 100%; /* 占满容器宽度 */
+            display: inline-block; /* 内联块级显示 */
+            margin: 0 5px; /* 设置间距 */
         }
 
-            /* 子菜单纵向展示 */
+            /* 子菜单 */
             #nav .menus_items .menus_item:hover .menus_item_child {
-                display: block !important; /* 悬停时显示子菜单，并设置为块级显示 */
-                position: relative; /* 相对定位子菜单 */
-                top: 0; /* 清除子菜单的 top 值 */
-                left: 0; /* 清除子菜单的 left 值 */
-                transform: none; /* 清除子菜单的水平居中对齐 */
-                width: 100%; /* 占满容器宽度 */
-                padding-left: 15px; /* 添加左内边距 */
+                top: 100%; /* 子菜单放在父菜单项的正下方 */
+                left: 50%; /* 水平居中 */
+                transform: translateX(-50%); /* 水平居中对齐 */
             }
 
-    /* 子菜单项样式 */
-    .menus_items .menus_item .menus_item_child li {
-        margin: 5px 0; /* 调整子菜单项的间距 */
-        padding-left: 15px; /* 添加左内边距 */
-        width: calc(100% - 15px); /* 调整子菜单项的宽度以适应内边距 */
-    }
+            /* 子菜单项样式 */
+            #nav .menus_items .menus_item .menus_item_child {
+                display: block !important; /* 改为块级显示 */
+            }
 
-    .menus_items .menus_item .menus_item_child a {
-        display: block;
-        width: 100%;
-    }
+                #nav .menus_items .menus_item .menus_item_child li {
+                    margin: 5px 0; /* 调整子菜单项的间距 */
+                }
 }
-
-
 
 
 
