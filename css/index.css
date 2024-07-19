@@ -6724,33 +6724,33 @@ center#name-container {
 
 
 /* 手机端菜单 */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     #nav .menus_items {
-        flex-direction: column; /* 小屏幕上垂直排列 */
-        align-items: flex-start; /* 左对齐 */
-    }
+        flex-direction: column;*/ /* 小屏幕上垂直排列 */
+        /*align-items: flex-start;*/ /* 左对齐 */
+    /*}*/
 
         /* 调整子菜单项样式 */
-        #nav .menus_items .menus_item:hover .menus_item_child {
-            left: 0; /* 子菜单左对齐 */
-            transform: none; /* 移除居中对齐的平移 */
-        }
+        /*#nav .menus_items .menus_item:hover .menus_item_child {
+            left: 0;*/ /* 子菜单左对齐 */
+            /*transform: none;*/ /* 移除居中对齐的平移 */
+        /*}
 
     .menus_items .menus_item .menus_item_child li {
-        margin: 5px 0; /* 调整子菜单项的间距 */
-    }
+        margin: 5px 0;*/ /* 调整子菜单项的间距 */
+    /*}*/
 
  /* 清除特定子菜单项的居中样式 */
-    .menus_items .menus_item:nth-child(2) .menus_item_child,
+    /*.menus_items .menus_item:nth-child(2) .menus_item_child,
     .menus_items .menus_item:nth-child(3) .menus_item_child,
     .menus_items .menus_item:nth-child(4) .menus_item_child,
     .menus_items .menus_item:nth-child(5) .menus_item_child,
     .menus_items .menus_item:nth-child(6) .menus_item_child,
     .menus_items .menus_item:nth-child(7) .menus_item_child {
-        left: 0 !important; /* 清除水平居中 */
-        transform: none !important; /* 清除水平居中对齐 */
-    }
-}
+        left: 0 !important;*/ /* 清除水平居中 */
+        /*transform: none !important;*/ /* 清除水平居中对齐 */
+    /*}
+}*/
 
 
    
