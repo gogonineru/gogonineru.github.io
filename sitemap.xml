@@ -83,15 +83,6 @@
   </url>
   
   <url>
-    <loc>https://gogonine.cn/life/movies/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://gogonine.cn/life/music/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
@@ -101,7 +92,16 @@
   </url>
   
   <url>
-    <loc>https://gogonine.cn/personal/bb/index.html</loc>
+    <loc>https://gogonine.cn/life/movies/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://gogonine.cn/social/link/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -111,15 +111,6 @@
   
   <url>
     <loc>https://gogonine.cn/personal/love/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://gogonine.cn/site/census/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -146,7 +137,16 @@
   </url>
   
   <url>
-    <loc>https://gogonine.cn/social/link/index.html</loc>
+    <loc>https://gogonine.cn/site/census/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://gogonine.cn/personal/bb/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -166,22 +166,22 @@
 
   <url>
     <loc>https://gogonine.cn/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <lastmod>2024-07-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://gogonine.cn/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <loc>https://gogonine.cn/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://gogonine.cn/tags/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <loc>https://gogonine.cn/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -189,15 +189,15 @@
 
   
   <url>
-    <loc>https://gogonine.cn/categories/Python/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <loc>https://gogonine.cn/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://gogonine.cn/categories/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2024-07-19</lastmod>
+    <loc>https://gogonine.cn/categories/Python/</loc>
+    <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
